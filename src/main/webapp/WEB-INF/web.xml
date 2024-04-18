@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!--//////////////////////////////////////////////////////////////// -->
+    <!--************************ServletPerson*************************** -->
+    <!--//////////////////////////////////////////////////////////////// -->
+
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>ServletPerson.ServletGetPersonAll</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/person</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletAdd</servlet-name>
+        <servlet-class>ServletPerson.ServletSavePerson</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAdd</servlet-name>
+        <url-pattern>/person/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletId</servlet-name>
+        <servlet-class>ServletPerson.ServletGetPersonById</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletId</servlet-name>
+        <url-pattern>/person/id</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDel</servlet-name>
+        <servlet-class>ServletPerson.ServletDeletePerson</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDel</servlet-name>
+        <url-pattern>/person/del</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdatePerson</servlet-name>
+        <servlet-class>ServletPerson.ServletUpdatePerson</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdatePerson</servlet-name>
+        <url-pattern>/person/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletGetPersonBookBy</servlet-name>
+        <servlet-class>ServletPerson.ServletGetPersonBookBy</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletGetPersonBookBy</servlet-name>
+        <url-pattern>/person/book</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletPersonRemovingArmorBooks</servlet-name>
+        <servlet-class>ServletPerson.ServletPersonRemovingArmorBooks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletPersonRemovingArmorBooks</servlet-name>
+        <url-pattern>/person/book/Removing</url-pattern>
+    </servlet-mapping>
+    <!--//////////////////////////////////////////////////////////////// -->
+    <!--************************ServletBook***************************** -->
+    <!--//////////////////////////////////////////////////////////////// -->
+    <servlet>
+        <servlet-name>ServletBookGetAll</servlet-name>
+        <servlet-class>ServletBook.ServletBookGetAll</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletBookGetAll</servlet-name>
+        <url-pattern>/Book</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletBookGetById</servlet-name>
+        <servlet-class>ServletBook.ServletBookGetById</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletBookGetById</servlet-name>
+        <url-pattern>/Book/id</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletBookSave</servlet-name>
+        <servlet-class>ServletBook.ServletBookSave</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletBookSave</servlet-name>
+        <url-pattern>/Book/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletBookUpdate</servlet-name>
+        <servlet-class>ServletBook.ServletBookUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletBookUpdate</servlet-name>
+        <url-pattern>/Book/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletBookDelete</servlet-name>
+        <servlet-class>ServletBook.ServletBookDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletBookDelete</servlet-name>
+        <url-pattern>/Book/delete</url-pattern>
+    </servlet-mapping>
+</web-app>
