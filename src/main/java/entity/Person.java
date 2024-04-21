@@ -20,7 +20,7 @@ public class Person {
     public static Person getInstance() {
         if (person == null) {
             synchronized (Person.class) {
-                if (person == null) person = new Person();
+                if (person == null) person = new Person(); // не забывай про скобки и пробелы, это улучшает читаемость
             }
 
         }

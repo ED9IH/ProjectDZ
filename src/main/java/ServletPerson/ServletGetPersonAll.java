@@ -15,7 +15,7 @@ public class ServletGetPersonAll extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)  {// тут также, сервлет д.б. один
 
         try {
             PersonServiceGetAll.getInstance().doGet(req, resp);

@@ -37,7 +37,7 @@ public class ServiceBookGetAll {
 
             while (resultSet.next()) {
                 Book book = Book.getInstance();
-                book.setId(Integer.parseInt(resultSet.getString("book_id")));
+                book.setId(Integer.parseInt(resultSet.getString("book_id"))); // это в маппер можно было бы
                 book.setNameBook(resultSet.getString("name_book"));
                 ObjectMapper mapper = new ObjectMapper();
                 String json = mapper.writeValueAsString(book);
