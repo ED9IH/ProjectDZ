@@ -45,8 +45,6 @@ public class PersonDTO {
         personDTO.setName(person.getName());
         personDTO.setEnrichment("Entity Enrichment via DTO");
 
-
-
         return personDTO;
     }
 
