@@ -19,9 +19,7 @@ import java.sql.SQLException;
 
 public class ServiceBookGetById {
 
-
     private static ServiceBookGetById serviceBookGetById;
-
 
     public ServiceBookGetById() {
     }
@@ -63,7 +61,6 @@ public class ServiceBookGetById {
                 json = objectMapper.writeValueAsString(book);
                 resp.getWriter().write(json);
             }
-
 
             resultSet.close();
             preparedStatement.close();
