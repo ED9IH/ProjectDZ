@@ -2,26 +2,23 @@ package entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class Book   {
-    private static Book book;
+@NoArgsConstructor
+public class Book {
 
     private long id;
 
     private String nameBook;
 
-    public Book() {
+    private static final class BookHolder {
+        static final Book book = new Book();
     }
 
     public static Book getInstance(){
-        if(book==null){
-            synchronized (Book.class){
-                if(book==null)book=new Book();
-            }
-        }
-        return book;
+        return BookHolder.book;
     }
 
 

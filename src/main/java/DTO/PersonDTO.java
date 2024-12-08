@@ -11,7 +11,7 @@ public class PersonDTO {
 
     private String enrichment;
 
-    public PersonDTO() {
+    public PersonDTO() { // зачем? он же по дефолту идет
     }
 
     public long getId() {

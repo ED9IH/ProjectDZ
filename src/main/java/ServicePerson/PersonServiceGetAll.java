@@ -35,7 +35,7 @@ public class PersonServiceGetAll {
 
     }
 
-    public static List<String> getAll() {
+    public static List<String> getAll() { // все эти методы должны быть в одном сервисе, не нужно под каждый метод выделять свой сервис
         PersonDTO personDTO = new PersonDTO();
         List<String> json = new ArrayList<>();
 

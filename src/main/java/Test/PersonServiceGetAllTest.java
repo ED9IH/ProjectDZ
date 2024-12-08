@@ -12,8 +12,9 @@ import org.junit.Test;
 
 public class PersonServiceGetAllTest {
 
+    // А где тесты на все остальное?
     @Test
-    public void testGetAll() throws Exception {
+    public void testGetAll() throws Exception { // есть папка test, что этот класс делает тут?
         Connection connection = mock(Connection.class);
         Statement statement = mock(Statement.class);
         ResultSet resultSet = mock(ResultSet.class);

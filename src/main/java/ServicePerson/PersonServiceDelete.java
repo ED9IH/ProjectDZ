@@ -19,8 +19,6 @@ public class PersonServiceDelete {
 
     private static PersonServiceDelete personServiceDelete;
 
-    public PersonServiceDelete() {
-    }
 
     public static PersonServiceDelete getInstance() {
         if (personServiceDelete == null) {
@@ -35,7 +33,7 @@ public class PersonServiceDelete {
     }
 
     public void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        InputStream inputStream = req.getInputStream();
+        InputStream inputStream = req.getInputStream(); // а чего его не закрываем?
         StringBuilder builder = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
@@ -45,8 +43,7 @@ public class PersonServiceDelete {
         }
         String jsonData = builder.toString();
         JSONObject jsonObject = new JSONObject(jsonData);
-        String jsonId = jsonObject.getString("id");
-        int id = Integer.parseInt(jsonId);
+        int id = Integer.parseInt(jsonObject.getString("id"));
 
         try(Connection connection = new DBConnect().getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM public.\"Person\" WHERE id=?");
